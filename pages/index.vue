@@ -1,15 +1,20 @@
 <template>
-  <div class="component p-10 bg-red-500 w-fit">
-    <BlogCard/>
+  <div class="flex flex-wrap gap-2">
+    <div v-for="post in posts">
+      <BlogCard :post="post"/>
+    </div>
   </div>
 </template>
 
 
 <script lang="ts" setup>
+import { appState } from '~/appState';
+const posts = appState.posts
+
 
 </script>
 
 
 <style lang="css" scoped>
 
-</style>
+</style>~/appState
